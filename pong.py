@@ -38,6 +38,21 @@ ball.goto(0, 0)
 ball.dx = 0.5
 ball.dy = 0.5
 
+# Score
+
+score_a = 0
+score_b = 0
+
+# Pen
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color('white')
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+pen.write('Player A: 0  Player B: 0', align='center', font=('Courier', 24, 'normal'))
+
+
 # paddle functions
 
 
@@ -95,17 +110,24 @@ while True:
     if ball.xcor() > 390:  # ball has gone past the right paddle
         ball.goto(0, 0)  # resets the ball in the middle
         ball.dx *= -1  # reverses the ball movement direction
+        score_a += 1
+        pen.clear()
+        pen.write(f'Player A: {score_a}  Player B: {score_b}', align='center', font=('Courier', 24, 'normal'))
 
     if ball.xcor() < -390:  # left paddle, remember 390 because half of width is 400 - ball_width/2
         ball.goto(0, 0)
         ball.dx *= -1
+        score_b += 1
+        pen.clear()
+        pen.write(f'Player A: {score_a}  Player B: {score_b}', align='center', font=('Courier', 24, 'normal'))
 
-# Paddle and Ball Collisions
+    # Paddle and Ball Collisions
     # ball xcords need to be greater than 340 but less than 350
     # if you don't have both conditions, the ball can get stuck behind the paddle
     # second big condition is center of paddle to upper limit and center to lower limit,
     # upper limit must be less than cur ball location
     # lower limit must be greater than cur ball location
+    # the ball xcords are opposite for the left paddle
     if (340 < ball.xcor() < 350) and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
         ball.setx(340)
         ball.dx *= -1
