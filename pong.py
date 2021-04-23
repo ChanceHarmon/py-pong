@@ -100,3 +100,16 @@ while True:
         ball.goto(0, 0)
         ball.dx *= -1
 
+# Paddle and Ball Collisions
+    # ball xcords need to be greater than 340 but less than 350
+    # if you don't have both conditions, the ball can get stuck behind the paddle
+    # second big condition is center of paddle to upper limit and center to lower limit,
+    # upper limit must be less than cur ball location
+    # lower limit must be greater than cur ball location
+    if (340 < ball.xcor() < 350) and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
+        ball.setx(340)
+        ball.dx *= -1
+
+    if (-340 > ball.xcor() > -350) and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
+        ball.setx(-340)
+        ball.dx *= -1
