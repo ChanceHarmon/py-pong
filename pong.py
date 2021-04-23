@@ -5,7 +5,7 @@ import turtle
 win = turtle.Screen()
 win.title('Pong by Chance')
 win.bgcolor('black')
-win.setup(width=800, height=800)
+win.setup(width=800, height=600)
 win.tracer(0)  # Stops window from updating, means we manually have to update the window
 
 # Paddle A
@@ -34,6 +34,10 @@ ball.color('white')
 ball.penup()
 ball.goto(0, 0)
 
+# Ball movement
+ball.dx = 0.5
+ball.dy = 0.5
+
 # paddle functions
 
 
@@ -44,19 +48,19 @@ def paddle_a_up():
 
 
 def paddle_a_down():
-    y = paddle_a.ycor()  # ycor is from the turtle module
+    y = paddle_a.ycor()
     y -= 20
     paddle_a.sety(y)
 
 
 def paddle_b_up():
-    y = paddle_b.ycor()  # ycor is from the turtle module
+    y = paddle_b.ycor()
     y += 20
     paddle_b.sety(y)
 
 
 def paddle_b_down():
-    y = paddle_b.ycor()  # ycor is from the turtle module
+    y = paddle_b.ycor()
     y -= 20
     paddle_b.sety(y)
 
@@ -72,3 +76,27 @@ win.onkeypress(paddle_b_down, 'Down')
 
 while True:
     win.update()
+
+    # Move the ball
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
+
+    # Border check/ keep ball in box
+
+    if ball.ycor() > 290:  # You check > 290 because the middle of the board is 0, less than middle is negative
+        # value. Since height is 600 and ball is 20, you measure half of board minus half of ball pixel value
+        ball.sety(290)
+        ball.dy *= -1
+
+    if ball.ycor() < -290:
+        ball.sety(-290)
+        ball.dy *= -1
+
+    if ball.xcor() > 390:  # ball has gone past the right paddle
+        ball.goto(0, 0)  # resets the ball in the middle
+        ball.dx *= -1  # reverses the ball movement direction
+
+    if ball.xcor() < -390:  # left paddle, remember 390 because half of width is 400 - ball_width/2
+        ball.goto(0, 0)
+        ball.dx *= -1
+
