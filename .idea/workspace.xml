@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07fb94d6-ba66-46ee-835c-010673e42ebe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bounce.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pong.py" beforeDir="false" afterPath="$PROJECT_DIR$/pong.py" afterDir="false" />
     </list>
@@ -24,6 +25,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="pong" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -67,22 +73,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="277" key="GridCell.Tab.0.bottom" timestamp="1619220839960">
+    <state width="1878" height="277" key="GridCell.Tab.0.bottom" timestamp="1619230209872">
       <screen x="-282" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.bottom/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619220839960" />
-    <state width="1878" height="277" key="GridCell.Tab.0.center" timestamp="1619220839954">
+    <state width="1878" height="277" key="GridCell.Tab.0.bottom/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619230209872" />
+    <state width="1878" height="277" key="GridCell.Tab.0.center" timestamp="1619230209870">
       <screen x="-282" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.center/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619220839954" />
-    <state width="1878" height="277" key="GridCell.Tab.0.left" timestamp="1619220839953">
+    <state width="1878" height="277" key="GridCell.Tab.0.center/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619230209870" />
+    <state width="1878" height="277" key="GridCell.Tab.0.left" timestamp="1619230209868">
       <screen x="-282" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.left/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619220839953" />
-    <state width="1878" height="277" key="GridCell.Tab.0.right" timestamp="1619220839954">
+    <state width="1878" height="277" key="GridCell.Tab.0.left/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619230209868" />
+    <state width="1878" height="277" key="GridCell.Tab.0.right" timestamp="1619230209871">
       <screen x="-282" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="277" key="GridCell.Tab.0.right/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619220839954" />
+    <state width="1878" height="277" key="GridCell.Tab.0.right/-282.-1080.1920.1080/1680.-1080.1080.1920/0.0.1680.1050@-282.-1080.1920.1080" timestamp="1619230209871" />
     <state x="209" y="-904" key="SettingsEditor" timestamp="1619112076914">
       <screen x="-282" y="-1080" width="1920" height="1080" />
     </state>

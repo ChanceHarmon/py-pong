@@ -1,6 +1,10 @@
 # Basic Pong game with Python
 
 import turtle
+import os
+# For sound on windows
+# import winsound, not os
+# to play, winsound.PlaySound('soundfile.wav', winsound.SND_ASYNC)
 
 win = turtle.Screen()
 win.title('Pong by Chance')
@@ -102,10 +106,13 @@ while True:
         # value. Since height is 600 and ball is 20, you measure half of board minus half of ball pixel value
         ball.sety(290)
         ball.dy *= -1
+        os.system('afplay bounce.wav&')
+
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
+        os.system('afplay bounce.wav&')
 
     if ball.xcor() > 390:  # ball has gone past the right paddle
         ball.goto(0, 0)  # resets the ball in the middle
@@ -131,7 +138,9 @@ while True:
     if (340 < ball.xcor() < 350) and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
         ball.setx(340)
         ball.dx *= -1
+        os.system('afplay bounce.wav&')
 
     if (-340 > ball.xcor() > -350) and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
+        os.system('afplay bounce.wav&')
