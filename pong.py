@@ -102,6 +102,27 @@ win.onkeypress(paddle_b_down, 'Down')
 while True:
     win.update()
 
+    if score_a >= 10:
+        print('Player A wins ')
+        winner_a = win.textinput('Congrats Player A, you won!', 'Would you like to play again? Yes/No?')
+        if winner_a.lower() == 'yes':
+            score_a = 0
+            score_b = 0
+            pen.clear()
+            pen.write('Player A: 0  Player B: 0', align='center', font=('Courier', 24, 'normal'))
+        else:
+            break
+    if score_b >= 10:
+        print('Player B wins ')
+        winner_a = win.textinput('Congrats Player B, you won!', 'Would you like to play again? Yes/No?')
+        if winner_a.lower() == 'yes':
+            score_a = 0
+            score_b = 0
+            pen.clear()
+            pen.write('Player A: 0  Player B: 0', align='center', font=('Courier', 24, 'normal'))
+        else:
+            break
+
     # Move the ball
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
