@@ -5,6 +5,7 @@ import os
 # For sound on windows
 # import winsound, not os
 # to play, winsound.PlaySound('soundfile.wav', winsound.SND_ASYNC)
+# linux is still os, but it is aplay, not afplay
 
 win = turtle.Screen()
 win.title('Pong by Chance')
@@ -61,32 +62,37 @@ pen.write('Player A: 0  Player B: 0', align='center', font=('Courier', 24, 'norm
 
 
 def paddle_a_up():
-    y = paddle_a.ycor()  # ycor is from the turtle module
-    y += 20
-    paddle_a.sety(y)
+    if paddle_a.ycor() <= 240:
+        y = paddle_a.ycor()  # ycor is from the turtle module
+        y += 10
+        paddle_a.sety(y)
 
 
 def paddle_a_down():
-    y = paddle_a.ycor()
-    y -= 20
-    paddle_a.sety(y)
+    if paddle_a.ycor() >= -230:
+        y = paddle_a.ycor()
+        y -= 10
+        paddle_a.sety(y)
 
 
 def paddle_b_up():
-    y = paddle_b.ycor()
-    y += 20
-    paddle_b.sety(y)
+    if paddle_b.ycor() <= 240:
+        y = paddle_b.ycor()
+        y += 10
+        paddle_b.sety(y)
 
 
 def paddle_b_down():
-    y = paddle_b.ycor()
-    y -= 20
-    paddle_b.sety(y)
+    if paddle_b.ycor() >= -230:
+        y = paddle_b.ycor()
+        y -= 10
+        paddle_b.sety(y)
 
 
 # Keyboard Binding
 win.listen()
-win.onkeypress(paddle_a_up, 'w')  # assigning keys to be able to move the a paddle
+# assigning keys to be able to move the a paddle
+win.onkeypress(paddle_a_up, 'a')  # I picked a instead of w, the upper row of keys don't have hold functionality
 win.onkeypress(paddle_a_down, 's')
 win.onkeypress(paddle_b_up, 'Up')
 win.onkeypress(paddle_b_down, 'Down')
