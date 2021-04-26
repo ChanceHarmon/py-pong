@@ -34,7 +34,7 @@ paddle_b.goto(350, 0)  # X, Y coords
 ball = turtle.Turtle()
 ball.speed(0)
 ball.shape('square')
-ball.color('white')
+ball.color('green')
 ball.penup()
 ball.goto(0, 0)
 
@@ -135,12 +135,12 @@ while True:
     # upper limit must be less than cur ball location
     # lower limit must be greater than cur ball location
     # the ball xcords are opposite for the left paddle
-    if (340 < ball.xcor() < 350) and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
-        ball.setx(340)
+    if (330 < ball.xcor() < 340) and (paddle_b.ycor() + 55 > ball.ycor() > paddle_b.ycor() - 55):
+        ball.setx(330)
         ball.dx *= -1
         os.system('afplay bounce.wav&')
 
-    if (-340 > ball.xcor() > -350) and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
-        ball.setx(-340)
+    if (-330 > ball.xcor() > -340) and (paddle_a.ycor() + 55 > ball.ycor() > paddle_a.ycor() - 55):
+        ball.setx(-330)
         ball.dx *= -1
         os.system('afplay bounce.wav&')
